@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Syne:wght@400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+.subnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #1A1A1A;
+    padding:12px 5vw;
+
+  }
+  .leftsubnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #626262;
+    gap: 10px;
+    background-color: #1A1A1A;
+    cursor: pointer;
+  }
+  .rightsubnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #626262;
+    background-color: #1A1A1A;
+    
+  }
+  .logbtn{
+    margin-right: 30px;
+    cursor: pointer;
+    
+  }
+  .SocialMedia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  @media screen  and (max-width:600px){
+
+    .subnav{
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* gap: 5px; */
+      background-color: #1A1A1A;
+      /* padding:12px 5vw; */
+    }
+    .leftsubnav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1A1A1A; 
+    }
+    .leftsubnav p{
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #626262;
+      margin: 0;padding: 0;
+    }
+    .leftsubnav img{
+      margin: 0;padding: 0;
+    }
+    .rightsubnav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #626262;
+      background-color: #1A1A1A;
+      
+    }
+    .logbtn{
+      margin-right: 5px;
+      
+    }
+    .SocialMedia{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* gap: 10px; */
+      margin: 0;
+    }
+    .SocialMedia p{
+      display: none;
+    }
+  }
+  .dark3{
+    background: #fce6da;
+    transition:all 0.8s ease;
+    color: #000;
+  
+  }
+ 
+  .dark{
+    color: black;
+    transition:all 0.8s ease;
+    /* background-color: #fff; */
+  }

@@ -1,0 +1,277 @@
+.cartheading{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .iteamlist{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    /* height: 100vh; */
+      /* overflow-x: hidden; */
+  }
+  .cartheading{
+    position: sticky;
+    top: 0;
+    background: #000;
+    z-index: 1;
+  }
+  .itamlistbox{
+    display: flex;
+    /* flex: 0.8; */
+    align-items: start;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: column;
+    background: #3b344a;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+    /* overflow-x: hidden; */
+    box-shadow: rgba(83, 83, 89, 0.25) 0px 6px 12px -2px, rgba(71, 70, 70, 0.801) 0px 3px 7px -3px;
+  }
+  .itamlistbox h2{
+    text-align: start;
+  }
+  .itemCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    border-bottom: 0.5px solid  rgb(124, 122, 122);
+  }
+  .itemCard img{
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  .iteamlist{
+    color: #fff;
+  }
+  .itamlistbox{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  .itamlistbox img{
+    display: flex;
+    width: 10vw;
+  }
+  .itemInfor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .favoritebtn{
+    color: #f23232;
+  }
+  .favoritebtndiv{
+    background: #ff6759;
+    padding: 2px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  
+  }
+  .favoritebtndiv:hover{
+    background-color: #ef5236;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
+  }
+  .incredecri{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  
+  }
+  .incredecri button{
+    background: #252525;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  
+  .totalamt{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .StartShopping{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    background: #ff7040;
+    font-weight: 500;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  
+    padding: 10px;
+  }
+  .totalamt{
+    display: flex;
+    
+    align-items: center;
+    gap: 5px;
+  
+  }
+
+  .paymentBox{
+    width: 30%;
+    
+   background-color: #35496c;
+    border-radius: 5px;
+  }
+  
+  .totalInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    font-weight: 200;
+  }
+  .orderBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .orderBtn button{
+    background: #ff733c;
+    border: none;
+    outline: none;
+    padding:5px 10px;
+    border-radius: 5px;
+    color: #fffefe;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition:all 0.8s ease;
+  }
+  .orderBtn button:hover{
+    background: #fb6428;
+    cursor: pointer;
+    /* font-size: 16px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
+  }
+  .cart2{
+    display: none;
+  }
+
+
+  @media screen and (max-width:600px)  {
+    .itamlistbox {
+      width: 100%;
+      overflow: auto;
+      justify-content: start;
+  }
+    
+    .itamlistbox{
+      background: #332B47;
+    }
+    .paymentBoxinfo{
+      background: #3f75d2;
+  
+    }
+    .paymentBox{
+      overflow: hidden;
+      background: #3f75d2;
+      box-shadow: rgba(56, 56, 58, 0.25) 0px 6px 12px -2px, rgba(71, 70, 70, 0.801) 0px 3px 7px -3px;
+      border-radius: 10px;
+    }
+    .cartnum{
+      padding: 0 6px;
+    }
+    .iteamlist{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        overflow-x: hidden;
+        gap: 0px;
+        
+      }
+      .itamlistbox{
+        width: 100%;
+        overflow: auto;
+        justify-content: start;
+        height: 68vh;
+        border-radius: 10px;
+      }
+      .itamlistbox img{
+        width: 30vw;
+      }
+      .itemCard{
+        height:300px;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    
+      }
+      
+      .itemInfor h4{
+        font-size: 12px;
+      
+      }
+      .itemInfor p{
+        font-size: 12px;
+      
+      }
+      .incredecri{
+        position: absolute;
+        bottom: 5px;
+        left: 30px;
+      }
+      .incredecri p {
+      display: flex;
+      align-items: center;
+        background: #cecece;
+        padding: 2px 5px;
+        border-radius: 50%;
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .paymentBox{
+        width: 100%;
+      }
+      .paymentBoxinfo{
+        background: #0c76ff;
+    
+      }
+  
+  }
+
+  .dark3{
+    background: #fce6da;
+    transition:all 0.8s ease;
+    color: #000;
+  
+  }
+ 
+  .dark{
+    color: black;
+    transition:all 0.8s ease;
+    /* background-color: #fff; */
+  }

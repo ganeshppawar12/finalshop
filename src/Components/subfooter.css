@@ -1,0 +1,462 @@
+.footerContainer{
+    background-image: url(images/backgroundimg.png);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* height: 100vh; */
+  
+  }
+  .footerbox{
+    padding: 50px 0 0 85px;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .newslleter{
+    /* border: 1px solid bisque; */
+    color: #626262;
+    margin-bottom: 10px;
+    width: 25%;
+  }
+  .newslleter h5{
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding-bottom: 15px;
+    letter-spacing: 1.2px;
+    
+  
+  }
+  .newslleter p{
+    font-size: 20px;
+  
+  }
+  .inputsection{
+    /* margin-top: 5px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 63%;
+    justify-content: baseline;
+    
+  
+  }
+  .inputsection input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 61%;
+    color: #626262;
+    padding-top:35px ;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 3px solid  #626262;
+  }
+  
+  .footerboxbottam{
+    display: flex;
+    padding: 0 85px 0 85px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footerslogan{
+    padding: 30px 0;
+  }
+  .footerslogan h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 131px;
+    font-weight: 800;
+    line-height: 100px;
+    letter-spacing: 5px;
+    
+  
+  }
+
+
+
+  @media screen  and (max-width:1694px){
+    .footerslogan h1{
+      font-size: 10vmax;
+    line-height: 14vh;
+  
+    }
+    /* .subcat{
+      position: absolute;
+    /* height: 100%; 
+    width: 170px;
+    top: 170px;
+    /* margin-left: 98px; 
+    left: 33%;
+    text-align: center;
+    transform: translateX(-21%);
+    /* box-shadow: 1px 0 6px rgb(171, 156, 156); 
+    display: none;
+    cursor: pointer;
+    /* padding: 12px; *
+    outline: none;
+    /* background-color: #dbcfcf; */
+    /* border-radius: 5px; */
+    /* overflow-x: hidden; 
+    
+      
+    }
+    .subcat::before{
+      position: absolute;
+      content: "";
+      height: 0px;
+      top: -13px;
+      width: 0px;
+     border: none;
+      margin-left:115px ;
+      /* border-top: 0px solid transparent;
+       border-left:15px solid transparent ;
+      border-right:15px solid transparent ; 
+     outline: none;
+      border-bottom: 15px solid rgb(255, 255, 255);
+      
+      
+     
+    }
+    .li:hover .subcat{
+      display: block;
+    
+    } */
+  }
+  
+  .footerbtn{
+    /* margin-right: 100px; */
+    position: absolute;
+  bottom: 100px;
+  right: 15px;
+    height: 181px;
+    width: 181px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F07E15;
+    border-radius: 50%;
+  }
+  
+  .footerbtn button{
+   background-color: transparent;
+   outline: none;
+   border: none;
+   font-size: 26px;
+  
+   font-weight: 400;
+   color: #F07E15;
+  }
+  .footerbtn:hover{
+    cursor: pointer;
+  }
+
+
+  @media screen  and (max-width:1000px){
+    .footerbox{
+      /* padding: 50px 0 0 85px; */
+      /* position: relative; */
+      margin:60px 0 0 0;
+      padding: 0;
+      /* height: 80vh; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newslleter{
+      /* border: 1px solid bisque; */
+      color: #626262;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .newslleter p{
+      font-size: 18px;
+      /* width: 80%; */
+      padding: 0 35px;
+      text-align: center;
+    
+    }
+    .inputsection{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      justify-content: baseline;
+      padding-left: 15px;
+    
+    }
+    .inputsection input{
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 95%;
+      color: #626262;
+      padding-top:35px ;
+      padding-left: 10px;
+      padding-bottom: 3px;
+      font-size: 18px;
+      font-weight: 400;
+      border-bottom: 3px solid  #626262;
+    }
+    .footerboxbottam{
+      display: flex;
+      padding: 85px 0 50px 0;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+     .footerslogan{ 
+       padding-left:20px; 
+       text-align: start;
+    } 
+    .footerslogan h1{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 85px;
+      font-weight: 800;
+      line-height: 70px;
+      letter-spacing: .1px;
+      
+    
+    }
+    .footerbtn{
+      /* margin-right: 100px; */
+      position: absolute;
+    bottom: 120px;
+    right: 25px;
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #F07E15;
+      border-radius: 50%;
+    }
+    .footerbtn button{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 14px;
+     
+      font-weight: 400;
+      color: #F07E15;
+     }
+  }
+
+
+
+
+  @media screen  and (max-width:520px){
+    .footerbox{
+      /* padding: 50px 0 0 85px; */
+      /* position: relative; */
+      margin:60px 0 0 0;
+      padding: 0;
+      /* height: 80vh; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newslleter{
+      /* border: 1px solid bisque; */
+      color: #626262;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .newslleter p{
+      font-size: 18px;
+      /* width: 80%; */
+      padding: 0 35px;
+      text-align: center;
+    
+    }
+    .inputsection{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      justify-content: baseline;
+      padding-left: 15px;
+    
+    }
+    .inputsection input{
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 95%;
+      color: #626262;
+      padding-top:35px ;
+      padding-left: 10px;
+      padding-bottom: 3px;
+      font-size: 18px;
+      font-weight: 400;
+      border-bottom: 3px solid  #626262;
+    }
+    .footerboxbottam{
+      display: flex;
+      padding: 85px 0 50px 0;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+     .footerslogan{ 
+       padding-left:20px; 
+       text-align: start;
+    } 
+    .footerslogan h1{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 55px;
+      font-weight: 800;
+      line-height: 37px;
+      letter-spacing: .1px;
+      
+    
+    }
+    .footerbtn{
+      /* margin-right: 100px; */
+      position: absolute;
+    bottom: 105px;
+    right: 9px;
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #F07E15;
+      border-radius: 50%;
+    }
+    .footerbtn button{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 14px;
+     
+      font-weight: 400;
+      color: #F07E15;
+     }
+  }
+
+
+
+
+
+
+  @media screen  and (max-width:391px){
+    .footerbox{
+      /* padding: 50px 0 0 85px; */
+      /* position: relative; */
+      margin:60px 0 0 0;
+      padding: 0;
+      /* height: 80vh; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newslleter{
+      /* border: 1px solid bisque; */
+      color: #626262;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .newslleter p{
+      font-size: 18px;
+      /* width: 80%; */
+      padding: 0 35px;
+      text-align: center;
+    
+    }
+    .inputsection{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      justify-content: baseline;
+      padding-left: 15px;
+    
+    }
+    .inputsection input{
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 95%;
+      color: #626262;
+      padding-top:35px ;
+      padding-left: 10px;
+      padding-bottom: 3px;
+      font-size: 18px;
+      font-weight: 400;
+      border-bottom: 3px solid  #626262;
+    }
+    .footerboxbottam{
+      display: flex;
+      padding: 85px 0 50px 0;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+     .footerslogan{ 
+       margin-right:5px; 
+    } 
+    .footerslogan h1{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 55px;
+      font-weight: 800;
+      line-height: 37px;
+      letter-spacing: .1px;
+      
+    
+    }
+    .footerbtn{
+      /* margin-right: 100px; */
+      position: absolute;
+    bottom: 105px;
+    right: 15px;
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #F07E15;
+      border-radius: 50%;
+    }
+    .footerbtn button{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 14px;
+     
+      font-weight: 400;
+      color: #F07E15;
+     }
+  }
+  
+  
+  .dark3{
+    background: #fce6da;
+    transition:all 0.8s ease;
+    color: #000;
+  
+  }
+ 
+  .dark{
+    color: black;
+    transition:all 0.8s ease;
+    /* background-color: #fff; */
+  }
+  
+  
+  
