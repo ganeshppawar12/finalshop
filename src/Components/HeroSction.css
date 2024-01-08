@@ -273,11 +273,11 @@
   .orgsqr{
     display: none;
   }
-  .see{
+  /* .see{
     position: absolute;
     top: 650px;
     left: 10px;
-  }
+  } */
   }
 
 
@@ -400,11 +400,11 @@
   .orgsqr{
     display: none;
   }
-  .see{
+  /* .see{
     position: absolute;
     top: 650px;
     left: 10px;
-  }
+  } */
   }
 
   @media screen  and (max-width:391px){
