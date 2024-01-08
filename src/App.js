@@ -12,14 +12,13 @@ import { useSelector } from "react-redux";
 function App() {
   const stroedItem = JSON.parse(localStorage.getItem("item"));
   const storeWishList = JSON.parse(localStorage.getItem("whishlist"));
-  // const storeColors = JSON.parse(localStorage.getItem("colors1"));
+  const storeColors = JSON.parse(localStorage.getItem("colors1"));
   const [cart, setCart] = useState(stroedItem || []);
   const [wishlist, setWishlist] = useState(storeWishList || []);
-  const [colors, setColors] = useState([]);
+  const [colors, setColors] = useState(storeColors || []);
   const lightTheme = useSelector((state) => state.themeKey);
   const [loaded, setloaded] = useState(false);
-console.log(cart)
-console.log(wishlist)
+
 
   function addToCart(item, e) {
     setloaded(true);
@@ -41,14 +40,13 @@ console.log(wishlist)
   function counterss(id, d, e) {
     let carts = cart.map((item, index) => {
       if (item.id === id.id) {
-        // counter[item.id] += 1;
+      
         item.qun += 1;
-        console.log(item.qun);
+
         setCart([...cart]) 
-        // localStorage.setItem("counter", JSON.stringify(counter));
+
       }
     });
-    // setCounter([...counter]);
 
     return { carts };
   }
@@ -56,28 +54,27 @@ console.log(wishlist)
   function deccounters(id) {
     let carts = cart.map((item, index) => {
       if (item.id === id.id && item.qun != 0) {
-        if (item.qun === 0) return 0;
-        // counter[item.id] -= 1;
+        if (item.qun === 0) return 1;
+   
         item.qun-=1;
         setCart([...cart]) 
-
-        // localStorage.setItem("counter", JSON.stringify(counter));
-      }
+  }
     });
 
-    // setCounter([...counter]);
+ 
 
     return carts;
   }
   function removefromwishList(item) {
-    // if (colors[item.id] === "red") {
-    //   colors[item.id] = "black";
+    if (colors[item.id] === "red") {
+
+      colors[item.id] = "black";
       let fliterWishList = wishlist.filter((value) => {
         return value.id !== item.id;
       });
       setWishlist(fliterWishList);
-      // setColors([...colors]);
-    // }
+      setColors([...colors]);
+    }
     toast.success("Item Deleted", {
       position: "top-right",
       autoClose: 5000,
@@ -92,17 +89,19 @@ console.log(wishlist)
   function addWishList(item, e) {
     if (colors[item.id] === "red") {
       colors[item.id] ='black';
+      
       localStorage.setItem("colors1", JSON.stringify(colors));
       let fliterWishList = wishlist.filter((value) => {
         return value.id !== item.id;
       });
+
       setWishlist(fliterWishList);
       setColors([...colors]);
     } else {
       colors[item.id] = "red";
       if (wishlist.indexOf(item) !== -1) return;
 
-      colors[item.id] = "red";
+      // colors[item.id] = "red";
       localStorage.setItem("colors1", JSON.stringify(colors));
       setWishlist([...wishlist, item]);
       setColors([...colors]);

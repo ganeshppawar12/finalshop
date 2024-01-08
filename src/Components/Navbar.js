@@ -127,7 +127,7 @@ export const Navbar = ({ cartitem, wishlist }) => {
               {/* Wishlist ({wishlist.length}) */}
               {wishlist?.length > 0 ? (
                 <p className="wishpro">{wishlist.length}</p>
-              ) : 0}
+              ) : ""}
               <IconButton>
                 <FavoriteBorderOutlinedIcon
                   style={{ color: "#ec729c" }}
@@ -139,7 +139,7 @@ export const Navbar = ({ cartitem, wishlist }) => {
             <div className={"bag" + (lightTheme ? "" : " wishlist2")}>
               {cartitem?.length > 0 ? (
                 <p className="cartnum">{cartitem.length}</p>
-              ) : 0}
+              ) : ""}
 
               {/* <p>Bag({cartitem.length})</p>  */}
               <IconButton>
