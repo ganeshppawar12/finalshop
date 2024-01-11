@@ -7,7 +7,7 @@
 }
 
 .productinformationContainer{
-
+    height: calc(100vh - 63.6px);
     background-color: rgb(255, 255, 255);
 }
 .productitemImg{
@@ -86,7 +86,7 @@
 }
 @media screen and (max-width:600px) {
     .productinformationContainer{
-        height: 92vh;
+        height: calc(100vh - 63.6px);
     }
 .productItem{
     flex-direction: column;
@@ -99,7 +99,7 @@
   
 }
 .productsbtn button{
-    width: 30vw;
+    width: 40vw;
 }
 .productsinformation{
     width: 100%;
