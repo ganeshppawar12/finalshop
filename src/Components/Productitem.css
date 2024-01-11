@@ -84,3 +84,25 @@
     justify-content: flex-start;
     border-radius: 5px;
 }
+@media screen and (max-width:600px) {
+    .productinformationContainer{
+        height: 92vh;
+    }
+.productItem{
+    flex-direction: column;
+}
+.productitemImg{
+    width: 100%;
+}
+.productitemImg img{
+    width: 40vw;
+  
+}
+.productsbtn button{
+    width: 30vw;
+}
+.productsinformation{
+    width: 100%;
+}
+    
+}
