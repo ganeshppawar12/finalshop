@@ -32,9 +32,9 @@ const WishList = ({wishlist,removefromwishList}) => {
                 wishlist.map((item,index) => (
                   <>
                     <div key={index} className={"wishitemCard" +(lightTheme ?"" : " wishitemCarddark")}>
-                      <img src={item.image}></img>
+                    <Link to={`/${item.id}`}>    <img src={item.image}></img></Link> 
                       <div className="itemInfor">
-                        <h4>{item.title}</h4>
+                      <Link to={`/${item.id}`}>      <h4>{item.title}</h4></Link> 
                         <p>{item.category}</p>
                         <p>Actual Price: ₹ {item.price} </p>
                         <div className="iteamdelete">

@@ -167,9 +167,9 @@ export const Navbar = ({ cartitem, wishlist }) => {
               : "navul" + (lightTheme ? "" : " navul3")
           }
         >
-          {Navbariteam.map((item) => (
+          {Navbariteam.map((item,index) => (
             <>
-              <li className={"navli" + (lightTheme ? "" : " navli2")}>
+              <li key={index} className={"navli" + (lightTheme ? "" : " navli2")}>
                 {item.name}
                 <ul className="category">
                   {item.child?.map((i) => {

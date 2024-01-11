@@ -108,11 +108,12 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters})
             cartitem.map((item, index) => (
               <>
                 <div key={index} className="itemCard">
-                  <img src={item.image}></img>
+                  <Link to={`/${item.id}`}>
+                  <img src={item.image}></img></Link>
                   <div className="itemInfor">
-                    <h4>{item.title}</h4>
+                  <Link to={`/${item.id}`}><h4>{item.title}</h4></Link>  
                     <p>{item.category}</p>
-                    <p>Actual Price: ₹ {item.price} </p>
+                    <p>Actual Price: $ {item.price} </p>
                     <div className="iteamdelete">
                       <div
                         onClick={() => handleDelete(item)}
@@ -148,21 +149,25 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters})
           ) : (
             <Link to="/">
               {" "}
-              <div className="StartShopping">Start Shopping</div>
+              <div className="StartShopping">
+                <img src='https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90'></img>
+                <h3>Your Cart is empty!</h3>
+                <p>Shop now</p>
+                </div>
             </Link>
           )}
         </div>
         <div className="paymentBox">
           <div className="paymentBoxinfo">
             <div className="totalInfo">
-              <h3>Subtotal</h3> <h3> ₹: {subtotal} </h3>
+              <h3>Subtotal</h3> <h3> $: {subtotal} </h3>
             </div>
             <div className="totalInfo">
-              <h3>Shipping</h3> <h3> ₹: {Shipping}</h3>
+              <h3>Shipping</h3> <h3> $: {Shipping}</h3>
             </div>
             <div className="totalInfo">
               <h3>Total(Incl. taxes) </h3>
-              <h3>₹: {subtotal + Shipping}</h3>
+              <h3>$: {subtotal + Shipping}</h3>
             </div>
           </div>
           <div className="orderBtn">

@@ -8,6 +8,8 @@ import WishList from "./Components/WishList";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
+import Product from "./Components/Product";
+
 
 function App() {
   const stroedItem = JSON.parse(localStorage.getItem("item"));
@@ -18,7 +20,6 @@ function App() {
   const [colors, setColors] = useState(storeColors || []);
   const lightTheme = useSelector((state) => state.themeKey);
   const [loaded, setloaded] = useState(false);
-
 
   function addToCart(item, e) {
     setloaded(true);
@@ -37,6 +38,7 @@ function App() {
     });
     setloaded(false);
   }
+  
   function counterss(id, d, e) {
     let carts = cart.map((item, index) => {
       if (item.id === id.id) {
@@ -160,6 +162,13 @@ function App() {
         ></Route>
 
         <Route
+        path="/:id"
+        element={<Product 
+          addToCart={addToCart}
+        ></Product>}
+        ></Route>
+
+        <Route
           path="/whishlist"
           element={
             <WishList
@@ -168,6 +177,8 @@ function App() {
             ></WishList>
           }
         ></Route>
+
+      
       </Routes>
       </HashRouter>
       <ToastContainer></ToastContainer>

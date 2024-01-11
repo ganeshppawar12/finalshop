@@ -1,5 +1,6 @@
+
 .productZone{
-    margin-top: 65px;
+    margin-top: 60px;
     background-color: #fff;
     padding: 35px 0 0 45px;
     /* height: 850px; */
@@ -7,7 +8,7 @@
   }
   .productlist{
     background-color: #fff;
-    padding-top: 35px ;
+    /* padding-top: 35px ; */
     padding-left: 35px;
   }
   .namebar{
@@ -54,81 +55,102 @@
      /* padding:0  100px 0 0 ;  */
      width: 100%;
   } 
+  .productOption ul {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  width: 10vw;
+  }
   .productOption ul li{
     transition: all 0.3s ease-in;
-    list-style: none;
     font-size: 20px;
-    font-weight: 600;
-    margin-top: 5px;
-    padding: 15px;
+    font-weight: 100;
     font-family: sans-serif;
   }
   .productOption ul li:hover{
     font-size: 26px;
-    font-weight: 400;
     cursor: pointer;
   }
   .storeiteam{
     cursor: pointer;
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-left: 90px;
+    /* margin-left: 90px; */
     overflow-x: auto;
-    gap: 30px;
+    gap: 100px;
   }
   .storeiteam::-webkit-scrollbar{
     display: none;
   }
-  /* .storeiteam{
-    overflow-x: auto;
-  } */
-  .prodcardimg:hover {
-  /* box-shadow: -20px -20px 20px rgb(171, 156, 156); */
-  box-shadow: 1px 1px 20px rgb(241, 241, 241);
-  /* border-radius: 20px; */
-  scroll-behavior:smooth;
   
-  
-  }
   .prodcard{
     text-align: center;
-    /* width:400px */
-    /* margin-right: 45px; */
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-between;
+    height:fit-content;
+    margin: 10px;
+    padding: 5px;
+    transition: all 0.5s ease;
+
+
     
   }
-  .prodcard:hover .shopbtn {
-    display: block;
-  
+  .prodcard:hover{
+    transition: all 0.5s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .shopcard{
     /* height: 420px; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     border: none;
-    width:400px;
+    /* width:400px; */
     
   }
   
   .prodcardimg{
     
     position: relative;
-   width: 85%;
+   /* width: 85%; */
   
   }
   .heartIcon{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    border: 0.3px solid rgb(239, 239, 239);
+    border-radius: 50%;
+    padding: 5px;
+    background: #f9f7f7;
+
+
+    
   }
-  .heartIcon svg:hover{
+  /* .heartIcon svg:hover{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   
+  } */
+  @keyframes heart-burst {
+    0% {
+      background-position: left
+    }
+    100% {
+      background-position: right
+    }
   }
-  
   .favicon{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    animation: heart-burst .8s steps(28) forwards;
     
   }
   .prodcardimg img{
@@ -147,11 +169,12 @@
   
   }
   
+
   
   .linkimg {
     position: absolute;
-    bottom: -5px;
-    right: -1px;
+    bottom: 0px;
+    right: 0px;
     transition: all 0.5s ease;
   
   }
@@ -163,36 +186,37 @@
     cursor: pointer;
     transform: translateY(-2px)
   }
-  .shopbtn{
+  .shopbtnk{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    position: absolute;
-    left: 25%;
-    top: 50%;
-    display: none;
+    margin: 10px 0;
+
   
   }
-  .shopbtn button{
-    background: #444444;
+  .shopbtnk button{
+    background: #fe7f48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     padding:10px 8px;
     outline: none;
     border: none;
     border-radius: 10px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
+    width: 80%;
     transition: all 0.5s ease;
   
   }
-  .shopbtn button:hover{
-    background: #494949;
+  .shopbtnk button:hover{
+    background: #ff4d00;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
    
   
   }
-  .shopbtn button:active{
+  .shopbtnk button:active{
     background: #000;
     cursor: pointer;
   }
@@ -203,13 +227,13 @@
   .prohead{
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 20px;
     padding-top: 10px ;
     font-weight: 600;
     padding-bottom: 20px;
-    letter-spacing: -0.2px;
+    /* letter-spacing: -0.2px; */
     text-align: start;
-    width: 90%;
+    /* width: 90%; */
   }
   /* .prodcard p{
     /* margin-top: 20px; 
@@ -406,16 +430,14 @@
       transition: all .5s ease-in;
         margin-left: 20%;
       }
-      /* .navigation img{
-       padding:  20px;
-      } */
+   
       .arrow1:hover{
       cursor: pointer;
-      /* transform: translateX(2px); */
+     
       }
       .arrow2:hover{
         cursor: pointer;
-        /* transform: translateX(-2px); */
+      
         }  
   }
   @media screen and (max-width:600px) {

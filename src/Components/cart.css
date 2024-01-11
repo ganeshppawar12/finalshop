@@ -13,7 +13,6 @@
     padding: 10px;
     gap: 10px;
     /* height: 100vh; */
-      /* overflow-x: hidden; */
   }
   .cartheading{
     position: sticky;
@@ -23,20 +22,25 @@
   }
   .itamlistbox{
     display: flex;
-    /* flex: 0.8; */
-    align-items: start;
-    justify-content: space-between;
+    align-items: center;
+    height: 95vh;
+    /* justify-content: space-between; */
     gap: 10px;
     flex-direction: column;
     background: #3b344a;
     padding: 10px;
     border-radius: 5px;
     width: 70%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+
     box-shadow: rgba(83, 83, 89, 0.25) 0px 6px 12px -2px, rgba(71, 70, 70, 0.801) 0px 3px 7px -3px;
   }
+  .itamlistbox::-webkit-scrollbar{
+    display: none;
+  }
   .itamlistbox h2{
-    text-align: start;
+    display: flex;
+    align-items:start !important;
   }
   .itemCard{
     display: flex;
@@ -58,7 +62,7 @@
   }
   .itamlistbox{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: space-between; */
   }
   .itamlistbox img{
@@ -117,7 +121,16 @@
   .StartShopping{
     display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
     font-size: 18px;
+   
+  }
+
+  .StartShopping img{
+    width: 20vw;
+  }
+  .StartShopping p{
     font-family:Arial, Helvetica, sans-serif;
     background: #ff7040;
     font-weight: 500;

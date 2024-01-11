@@ -10,6 +10,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import './Product.css'
 import { Skeleton } from "@mui/material";
 import CircularIndeterminate from "./progresser";
+import { Link } from "react-router-dom";
 
 const url = "https://fakestoreapi.com/products";
 
@@ -21,6 +22,8 @@ export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
   const [Apparels, setApparels] = useState([]);
   const [all, setAll] = useState([]);
   const [loaded, setloaded] = useState(false);
+  
+
 
 
 
@@ -45,6 +48,7 @@ export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
 
     feachdata();
   }, []);
+
 
 
   function forworde() {
@@ -136,22 +140,27 @@ export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
                       onClick={(e) => addWishList(iteam, e)}
                     ></FavoriteIcon>
                   </div>
+              <Link to={`${iteam.id}`}>
+
                   <div className="prodcardimg">
                     <img className="iteamimg" src={iteam.image}></img>
                     <div className="linkimg">
                       <img src={group1}></img>
                     </div>
-                    <div className="shopbtn">
+                   
+                  </div>
+              </Link>
+
+             
+                  <h1 className="prohead">{iteam.title}</h1>
+                </div>
+                {/* <p className="description">{iteam.description}</p> */}
+                <p className="price">${iteam.price}</p>
+                <div className="shopbtnk">
                       <button onClick={() => addToCart(iteam)}>
                         Add to Cart
                       </button>
                     </div>
-                  </div>
-
-                  <h1 className="prohead">{iteam.title}</h1>
-                </div>
-                <p className="description">{iteam.description}</p>
-                <p className="price">${iteam.price}</p>
               </div>
             ))}
           </div>
