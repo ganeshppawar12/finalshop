@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 // import { toggleTheme } from "../Features/themeSlice";
 import './cart.css'
-const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters}) => {
+const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,colors}) => {
   const [subtotal, setSubtotal] = useState();
   const [Shipping, setShipping] = useState(5 * cartitem.length);
 
@@ -123,7 +123,7 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters})
                         <DeleteIcon className="deletebtn"></DeleteIcon>
                       </div>
                       <div className="favoritebtndiv">
-                        <FavoriteIcon
+                        <FavoriteIcon style={{color:colors[item.id]}}
                           onClick={(e) => addWishList(item, e)}
                           className="favoritebtn"
                         ></FavoriteIcon>

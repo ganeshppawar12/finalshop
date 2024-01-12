@@ -55,7 +55,7 @@
      /* padding:0  100px 0 0 ;  */
      width: 100%;
   } 
-  .productOption ul {
+  .productOptionlist ul {
   list-style: none;
   display: flex;
   align-items: start;
@@ -63,13 +63,13 @@
   gap: 20px;
   width: 10vw;
   }
-  .productOption ul li{
+  .productOptionlist ul li{
     transition: all 0.3s ease-in;
     font-size: 20px;
     font-weight: 100;
     font-family: sans-serif;
   }
-  .productOption ul li:hover{
+  .productOptionlist ul li:hover{
     font-size: 26px;
     cursor: pointer;
   }
@@ -332,40 +332,16 @@
         gap: 30px;
         width: 100%;
       }
-      .productOption{
+      .productOptionlist{
         width: 100%;
-        margin-top: 20px;
-        text-align: center;
-        padding-right: 20px;
       }
-      .productOption ul{
-         display: flex;
-        
-        flex-direction: row;
-       align-items: center;
-        justify-content:space-evenly;
-        margin: 0;
-        /* gap: 10px; */
-        padding: 0;
-      }
-      .productOption ul li{
+      .productOptionlist ul{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content:space-evenly;
-        transition: all 0.3s ease-in;
-        list-style: none;
-        font-size: 14px;
-        font-weight: 400;
-        width: 100%;
-    /* margin: 10px; */
-    padding: 0;
-    font-family: sans-serif;
-      }
-      .productOption ul li:hover{
-        font-size: 16px;
-        font-weight: 400;
-        cursor: pointer;
+        margin: 10px 0;
+        width: 95vw;
+       align-items: center;
+       justify-content: space-between;
       }
       .storeiteam{
         width: 100%;
@@ -515,52 +491,16 @@
       gap: 30px;
       width: 100%;
     }
-    .productOption{
-      width: 100%;
-      margin-top: 20px;
-      text-align: center;
-      padding-right: 20px;
+    .productOptionlist ul{
+      width: 90vw;
     }
-    .productOption ul{
-       display: flex;
+    .productOptionlist ul li{
       
-      flex-direction: row;
-     align-items: center;
-      justify-content:space-evenly;
-      margin: 0;
-      /* gap: 10px; */
-      padding: 0;
-    }
-    .productOption ul li{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content:space-evenly;
-      transition: all 0.3s ease-in;
-      list-style: none;
       font-size: 14px;
-      font-weight: 400;
-      width: 100%;
-  /* margin: 10px; */
-  padding: 0;
-  font-family: sans-serif;
     }
-    .productOption ul li:hover{
-      font-size: 16px;
-      font-weight: 400;
-      cursor: pointer;
-    }
-    .storeiteam{
-      width: 100%;
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      margin-left: 1px;
-      overflow-x: auto;
-      gap: 30px;
-      height: 100%;
-      scroll-behavior: smooth;
+    .productOptionlist ul li:hover{
+      
+      font-size: 15px;
     }
     .prodcard{
       text-align: center;

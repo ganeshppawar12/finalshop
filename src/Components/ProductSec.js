@@ -121,7 +121,7 @@ export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
         </div>
 
         <div className="productpage">
-          <div className="productOption">
+          <div className="productOptionlist">
             <ul>
               <li onClick={() => Apparel()}>Apparel</li>
               <li onClick={() => Accessories(getAccessories)}> Accessories</li>

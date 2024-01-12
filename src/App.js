@@ -3,12 +3,15 @@ import { Subfoot } from "./Components/Subfoot";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Cart from "./Components/Cart";
 import AllMainPage from "./Components/AllMainPage";
-import { useEffect, useState } from "react";
-import WishList from "./Components/WishList";
+import React, { useEffect, useState } from "react";
+// import WishList from "./Components/WishList";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 import Product from "./Components/Product";
+import CircularIndeterminate from "./Components/progresser";
+const Carts = React.lazy(()=> import("./Components/Cart"));
+const Whislists = React.lazy(()=> import("./Components/WishList"));
 
 
 function App() {
@@ -150,14 +153,17 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Cart
+            <React.Suspense fallback={<div> <CircularIndeterminate></CircularIndeterminate> </div>}>
+            <Carts
               cartitem={cart}
               setCart={setCart}
               addWishList={addWishList}
               counterss={counterss}
               deccounters={deccounters}
+              colors={colors}
            
-            ></Cart>
+            ></Carts>
+            </React.Suspense>
           }
         ></Route>
 
@@ -169,12 +175,15 @@ function App() {
         ></Route>
 
         <Route
+        
           path="/whishlist"
           element={
-            <WishList
+            <React.Suspense fallback={<div> <CircularIndeterminate></CircularIndeterminate> </div>}>
+            <Whislists
               wishlist={wishlist}
               removefromwishList={removefromwishList}
-            ></WishList>
+            ></Whislists>
+            </React.Suspense>
           }
         ></Route>
 
