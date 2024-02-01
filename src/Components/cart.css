@@ -4,7 +4,7 @@
     align-items: center;
     gap: 5px;
     margin-left: 5px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
   }
   .iteamlist{
     display: flex;
@@ -75,6 +75,28 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  .iteamdelete{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .deletebtndiv{
+    background: #7b83d2;
+    padding: 2px 15px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    transition: all 0.5s ease;
+    color: #404040;
+  }
+  .deletebtndiv:hover{
+    background-color: #4461d5;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
   }
   
   .favoritebtn{

@@ -6,17 +6,17 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
-// import { toggleTheme } from "../Features/themeSlice";
+
 import './cart.css'
-const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,colors}) => {
+const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,colors,open}) => {
   const [subtotal, setSubtotal] = useState();
   const [Shipping, setShipping] = useState(5 * cartitem.length);
 
-//   const storecartitem = JSON.parse(localStorage.getItem("counter"));
 
-//   const [counter, setCounter] = useState(Array(20).fill(0));
+
+
   const [loaded, setloaded] = useState(false);
-//   console.log(counter)
+
  
 
   let quantity = document.querySelectorAll(".quantity");
@@ -28,9 +28,7 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,c
     });
     setCart(fillterData);
 
-    // setCounter([...counter, (counter[item.id] = 0)]);
-    // localStorage.setItem("counter", JSON.stringify(counter));
-
+    
     toast.success("Item Deleted", {
       position: "top-right",
       autoClose: 5000,
@@ -43,34 +41,6 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,c
     });
   }
 
-//   function counterss(id, d, e) {
-//     let carts = cartitem.map((item, index) => {
-//       if (item.id === id.id) {
-//         // counter[item.id] += 1;
-//         item.qun += 1;
-//         console.log(item.qun) 
-//         // localStorage.setItem("counter", JSON.stringify(counter));
-//       }
-//     });
-//     // setCounter([...counter]);
-
-//     return { carts };
-//   }
-
-//   function deccounters(id) {
-//     let carts = cartitem.map((item, index) => {
-//       if (item.id === id.id && Number(quantity[index].innerHTML) != 0) {
-//         if (Number(quantity[index].innerText) === 0) return 0;
-//         // counter[item.id] -= 1;
-
-//         // localStorage.setItem("counter", JSON.stringify(counter));
-//       }
-//     });
-
-//     // setCounter([...counter]);
-
-//     return carts;
-//   }
 
   let total = document.querySelectorAll(".total");
 

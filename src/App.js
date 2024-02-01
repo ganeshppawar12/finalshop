@@ -10,6 +10,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 import Product from "./Components/Product";
 import CircularIndeterminate from "./Components/progresser";
+
+import AllmainFrom from "./Components/AllmainFrom";
+
 const Carts = React.lazy(()=> import("./Components/Cart"));
 const Whislists = React.lazy(()=> import("./Components/WishList"));
 
@@ -23,6 +26,7 @@ function App() {
   const [colors, setColors] = useState(storeColors || []);
   const lightTheme = useSelector((state) => state.themeKey);
   const [loaded, setloaded] = useState(false);
+  const [open, setOpen] = useState(false)
 
   function addToCart(item, e) {
     setloaded(true);
@@ -123,6 +127,12 @@ function App() {
       });
     }
   }
+
+
+  function openfrom(){
+    setOpen(!open)
+    
+  }
   useEffect(() => {
     localStorage.setItem("item", JSON.stringify(cart));
     localStorage.setItem("whishlist", JSON.stringify(wishlist));
@@ -161,6 +171,8 @@ function App() {
               counterss={counterss}
               deccounters={deccounters}
               colors={colors}
+              openfrom={openfrom}
+              open={open}
            
             ></Carts>
             </React.Suspense>
@@ -191,6 +203,20 @@ function App() {
       </Routes>
       </HashRouter>
       <ToastContainer></ToastContainer>
+      {/* <From1></From1> */}
+      {/* <From2></From2> */}
+      {/* <From3></From3> */}
+              
+      <AllmainFrom 
+      cart={cart} 
+      open={open} 
+      setOpen={setOpen} 
+      counterss={counterss} 
+      deccounters={deccounters} 
+      setCart={setCart}
+      ></AllmainFrom>
+ 
+
       <Subfoot></Subfoot>
 
     </div>

@@ -1,0 +1,182 @@
+.from1Container{
+    /* background-color: #f5efef; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+   
+}
+.From1Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+    background:#fff;
+    width: 400px;
+    /* padding: 10px; */
+ 
+}
+
+.frominput{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.frominput h3{
+  font-size: 16px;
+  font-weight: 700;
+}
+.frominput input{
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgb(165, 165, 165);
+    outline: none;
+    padding: 5px;
+ 
+    border-radius: 5px;
+  }
+  /* @import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+
+input {
+  margin-top: 1%;
+  margin-left: 1%;
+  font-family: Montserrat, sans-serif;
+  padding: 0.5%;
+  /* border-radius: 7em; */
+  /* background-color: #ccd5fc; Green *
+
+  
+}
+
+button {
+  font-family: Montserrat, sans-serif;
+  transition-duration: 0.7s;
+  margin-top: 2%;
+  height: 3em;
+  width: 7em;
+  color: white;
+  background-color: #7589eb;
+  border-radius: 7em;
+  border: 0;
+}
+
+button:hover {
+  background-color: #ccd5fc;
+  color: black;
+  border-radius: 7em;
+} */
+
+.App-payment{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 5px;
+}
+.App-payment h1{
+    font-size: 20px;
+}
+.App-payment h4{
+    font-size: 16px;
+    font-weight: 400;
+}
+.from3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-group{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 5px;
+}
+.form-group input{
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.form-actions button{
+    border: none;
+    outline: none;
+    background-color: #3E84F8;
+    font-size: 16px;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+.form-actions button:hover{
+    background-color: #5493f9;
+ cursor: pointer;
+}
+
+
+.From4MainContainer{
+    height: 420px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+.From4Container{
+    display: flex;
+    width: 45%;
+    gap: 15px;
+}
+.From4Infromation{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.From4Container img{
+    /* padding: 5px; */
+    object-fit: contain;
+    width: 5vw;
+
+}
+.From4Infromation h4{
+   font-size: 12px;
+   color: #767676;
+   font-weight: 400;
+}
+
+.From4Counter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.From4Counter button{
+    /* padding: 4px; */
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: #333333;
+    background: #eaeaea;
+    border-radius: 50%;
+}
+
+@media screen  and (max-width:600px){
+    .From4Container{
+        flex-direction: column;
+    }
+    .From4Container img{
+        /* padding: 5px; */
+        object-fit: contain;
+        width: 20vw;
+        text-align: center;
+    
+    }
+}

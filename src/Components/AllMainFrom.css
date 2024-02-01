@@ -1,0 +1,94 @@
+body{
+    position: relative;
+}
+.MainFrom{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background: #ffffff;
+    width:700px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    gap: 10px;
+   
+}
+.Fromheading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Fromheading h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+.MainFromTitel{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 5px 0;
+}.MainFromTitel h3{
+    border-bottom: 4px solid rgb(202, 202, 202);
+    width: 50%;
+    height: 50px;
+    text-align:center;
+    transition: all 1s ease;
+}
+.fromBtn{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.nextBtn{
+    border: none;
+    outline: none;
+    background-color: #3E84F8;
+    font-size: 16px;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+
+}
+.nextBtn:hover{
+    background-color: #5493f9;
+ cursor: pointer;
+}
+
+.backBtn{
+    border: 1px solid rgb(97, 97, 97);
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #000000;
+    padding: 5px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media screen  and (max-width:1000px){
+    .MainFrom{
+        left: 12%;
+        /* width: fit-content; */
+        
+    }
+    
+}
+@media screen  and (max-width:600px){
+    .MainFrom{
+        left: 2%;
+        width: 96vw;
+        
+    }
+    .MainFromTitel h3{
+        font-size: 10px;
+        height: 35px;
+        width: 45%;
+
+    }
+    
+}
