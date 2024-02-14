@@ -19,6 +19,12 @@ body{
   transition: all 0.8s ease;
 
 }
+.Appi{
+  background: black;
+  transition: all 0.8s ease;
+  height: 100vh;
+  overflow: hidden
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');

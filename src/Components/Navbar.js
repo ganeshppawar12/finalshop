@@ -64,18 +64,13 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const url = "https://fakestoreapi.com/products/categories";
-export const Navbar = ({ cartitem, wishlist }) => {
-  const [toggle, setToggle] = useState(false);
+export const Navbar = ({ cartitem, wishlist, toggle, setToggle }) => {
   const dispatch = useDispatch();
 
   const handleToggle = () => {
-    if (document.body.clientWidth > 1000) {
-      setToggle(false);
-    } else {
-      setToggle(!toggle);
-    }
+    setToggle(!toggle);
   };
-
+  console.log(document.body.clientWidth);
   function handletoggelStatus() {
     if (document.body.clientWidth >= 1000) {
       setToggle(false);
@@ -107,7 +102,7 @@ export const Navbar = ({ cartitem, wishlist }) => {
       });
     };
     feachdata();
-  }, []);
+  }, [document.body.clientWidth]);
 
   useEffect(() => {
     handletoggelStatus();
@@ -127,7 +122,9 @@ export const Navbar = ({ cartitem, wishlist }) => {
               {/* Wishlist ({wishlist.length}) */}
               {wishlist?.length > 0 ? (
                 <p className="wishpro">{wishlist.length}</p>
-              ) : ""}
+              ) : (
+                ""
+              )}
               <IconButton>
                 <FavoriteBorderOutlinedIcon
                   style={{ color: "#ec729c" }}
@@ -139,7 +136,9 @@ export const Navbar = ({ cartitem, wishlist }) => {
             <div className={"bag" + (lightTheme ? "" : " wishlist2")}>
               {cartitem?.length > 0 ? (
                 <p className="cartnum">{cartitem.length}</p>
-              ) : ""}
+              ) : (
+                ""
+              )}
 
               {/* <p>Bag({cartitem.length})</p>  */}
               <IconButton>
@@ -167,14 +166,17 @@ export const Navbar = ({ cartitem, wishlist }) => {
               : "navul" + (lightTheme ? "" : " navul3")
           }
         >
-          {Navbariteam.map((item,index) => (
+          {Navbariteam.map((item, index) => (
             <>
-              <li key={index} className={"navli" + (lightTheme ? "" : " navli2")}>
+              <li
+                key={index}
+                className={"navli" + (lightTheme ? "" : " navli2")}
+              >
                 {item.name}
                 <ul className="category">
                   {item.child?.map((i) => {
                     return (
-                      <>
+                      <> 
                         <li>{i.name}</li>
                       </>
                     );

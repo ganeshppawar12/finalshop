@@ -4,7 +4,7 @@
     align-items: center;
     position: relative;
     margin: 0 5vw;
-    top: 5px;
+    /* top: 5px; */
     
     /* animation: slide-in 1000ms; */
     border-bottom:1px solid #fff;
@@ -130,16 +130,25 @@
    
   
   }
+  .star1{
+    position: absolute;
+    top: 85%;
+    left: 31%;
+    animation: rotate 15s infinite linear;
+    color: #fff;
+    transition: all 0.8s ease;
+    z-index: 31;
+  }
   .navul{
     display: flex ;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     list-style: none;
     padding: 5px 4vw;
     margin:10px 12px;
     width: 60vw;
     transition:all 0.5s ease;
-  
+  /* position: relative; */
     /* transition: all 0.2s ease; */
     
   }
@@ -162,6 +171,7 @@
     animation: top-in 1000ms;
   display: none;
   transition:all 0.8s ease;
+  /* position: relative; */
   
   
   }
@@ -172,49 +182,54 @@
     /* margin: 40px 0; */
     text-transform: uppercase;
     transition:all 0.8s ease;
-  
+    cursor: pointer;
+    padding: 5px 0;
+
   
   }
   
   .navli2{
     color: #000 !important;
-    /* background: #fce6da; */
+
     transition:all 1.8s ease !important;
   }
   
   
-  
-  .star1{
-    position: absolute;
-    top: 85%;
-    left: 31%;
-    animation: rotate 15s infinite linear;
-    color: #fff;
-    transition: all 0.8s ease;
-    z-index: 31;
-  }
+
   .category{
     margin-top: 5px;
     list-style: none;
+  
+
+   
+  }
+
+.category{
+    position: fixed; 
+
+  }
+  .category{
+   
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    display: none;
-    transition: all 0.8s ease;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+
   }
   .category li{
     font-size: 12px;
-    animation: top-in 1000ms;
+
     transition: all 0.8s ease;
     cursor: pointer;
+    padding: 5px 0 ;
+ 
+
+
   }
-  
-  /* .navul:nth-of-type() .category{
-    display: block;
-  } */
-  .navli:hover{
-    color: #5b5756;
+
+  .category li:hover{
+    color: #9d9796;
     cursor: pointer;
   }
   .hamburger{
@@ -227,6 +242,12 @@
   a{
     text-decoration: none;
     color: #fff;
+  }
+  .navli:nth-child(3) .category{
+    display: none;
+  }
+  .navli:nth-child(3):hover .category{
+    display: block;
   }
 
   @media screen  and (max-width:600px){
@@ -341,6 +362,10 @@
         position: absolute;
         top: 65px;
         right: 35px;
+      }
+      .category{
+        position: static; 
+    
       }
     
   }

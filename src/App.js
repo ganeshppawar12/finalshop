@@ -27,6 +27,7 @@ function App() {
   const lightTheme = useSelector((state) => state.themeKey);
   const [loaded, setloaded] = useState(false);
   const [open, setOpen] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   function addToCart(item, e) {
     setloaded(true);
@@ -143,7 +144,7 @@ function App() {
   
 
   return (
-    <div className={"App" + (lightTheme ? "" : " dark3")}>
+    <div className={ (toggle ? "Appi" : "App")+ (lightTheme ? "" : " dark3")}>
      <HashRouter>
       <Routes>
         <Route
@@ -155,6 +156,8 @@ function App() {
               addToCart={addToCart}
               wishlist={wishlist}
               colors={colors}
+              toggle={toggle}
+              setToggle={setToggle}
             ></AllMainPage>
           }
           
@@ -202,7 +205,7 @@ function App() {
       
       </Routes>
       </HashRouter>
-      <ToastContainer></ToastContainer>
+      <ToastContainer ></ToastContainer>
       {/* <From1></From1> */}
       {/* <From2></From2> */}
       {/* <From3></From3> */}
