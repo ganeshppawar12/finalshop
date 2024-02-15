@@ -2,15 +2,18 @@ import { useParams } from "react-router-dom";
 import "./Productitem.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import SouthIcon from '@mui/icons-material/South';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CircularIndeterminate from "./progresser";
+import { Context } from "../Context/Context";
 
 
-const Product = ({addToCart}) => {
+const Product = () => {
   const { id } = useParams();
+
+  const CartItems = useContext(Context);
+  const {addToCart,} = CartItems;
   const [loaded, setloaded] = useState(false);
 
-  // console.log(id);
 
   const [productitem, setProductitem] = useState({});
   async function fetchdata() {

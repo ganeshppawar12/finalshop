@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import Arrow1 from "./images/Arrow 1.png";
 import Arrow2 from "./images/Arrow 2.png";
@@ -11,10 +11,11 @@ import './Product.css'
 import { Skeleton } from "@mui/material";
 import CircularIndeterminate from "./progresser";
 import { Link } from "react-router-dom";
+import {Context} from '../Context/Context'
 
 const url = "https://fakestoreapi.com/products";
 
-export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
+export const ProductSec = () => {
   const [productiteam, setproductiteam] = useState([]);
   const [bestSeller, setBestSeller] = useState([]);
   const [getproductiteam, setgetproductiteam] = useState([]);
@@ -23,6 +24,8 @@ export const ProductSec = ({ addToCart, addWishList,colors = 'black' }) => {
   const [all, setAll] = useState([]);
   const [loaded, setloaded] = useState(false);
   
+  const CartItems = useContext(Context);
+  const {cart,addToCart,colors = 'black',addWishList} = CartItems;
 
 
 

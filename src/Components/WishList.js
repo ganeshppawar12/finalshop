@@ -1,19 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import DeleteIcon from "@mui/icons-material/Delete";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import { useSelector } from 'react-redux';
 import './wishlist.css'
-// import CircularIndeterminate from './CircularIndeterminate';
+import { Context } from '../Context/Context';
 
 
-const WishList = ({wishlist,removefromwishList}) => {
+
+const WishList = () => {
   const lightTheme = useSelector((state) => state.themeKey);
 
-
+  const CartItems = useContext(Context);
+  const {wishlist,removefromwishList} = CartItems;
    
 
     return (

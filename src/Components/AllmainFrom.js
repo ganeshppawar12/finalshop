@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import From1 from "./From1";
 import From2 from "./From2";
 import From3 from "./From3";
@@ -6,10 +6,12 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import './AllMainFrom.css'
 import From4 from "./From4";
+import { Context } from "../Context/Context";
 
-const AllmainFrom = ({open,setOpen,cart,counterss,deccounters,setCart}) => {
+const AllmainFrom = () => {
   const [step, setStep] = useState(0);
-  
+  const CartItems = useContext(Context);
+  const {cart,setCart,addToCart,wishlist,toggle,counterss,deccounters,colors,setToggle,openfrom,addWishList,setColors,removefromwishList,open,setOpen} = CartItems;  
 
   const handleStep = () => {
     if (step === 0) {

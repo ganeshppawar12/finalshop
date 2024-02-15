@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -6,11 +6,15 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
+import {Context} from '../Context/Context'
 
 import './cart.css'
-const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,colors,open}) => {
+const Cart = () => {
+
+  const CartItems = useContext(Context);
+  const {cart,setCart,counterss,deccounters,colors,openfrom,addWishList} = CartItems;
   const [subtotal, setSubtotal] = useState();
-  const [Shipping, setShipping] = useState(5 * cartitem.length);
+  const [Shipping, setShipping] = useState(5 * cart.length);
 
 
 
@@ -23,7 +27,7 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,c
   const lightTheme = useSelector((state) => state.themeKey);
 
   function handleDelete(item, index) {
-    let fillterData = cartitem.filter((id, index) => {
+    let fillterData = cart.filter((id, index) => {
       return id.id !== item.id;
     });
     setCart(fillterData);
@@ -57,7 +61,7 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,c
     totalAmount();
     localStorage.getItem("subtotal", JSON.stringify(subtotal));
  
-  }, [subtotal, setSubtotal, total,  cartitem]);
+  }, [subtotal, setSubtotal, total,  cart]);
 
   return (
     <>
@@ -73,9 +77,9 @@ const Cart = ({ cartitem, setCart, addWishList,openfrom ,counterss,deccounters,c
       </Link>
       <div className="iteamlist">
         <div className="itamlistbox">
-          <h2>Cart - {cartitem.length} items</h2>
-          {cartitem.length > 0 ? (
-            cartitem.map((item, index) => (
+          <h2>Cart - {cart.length} items</h2>
+          {cart.length > 0 ? (
+            cart.map((item, index) => (
               <>
                 <div key={index} className="itemCard">
                   <Link to={`/${item.id}`}>

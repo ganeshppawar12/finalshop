@@ -11,11 +11,15 @@ const AllMainPage = ({addToCart,cartitem,addWishList,wishlist,colorSorege,search
   return (
     <div>
         <Subnavbar></Subnavbar>
-      <Navbar cartitem={cartitem} wishlist={wishlist} searchItem={searchItem}    
-       toggle={toggle}
-       setToggle={setToggle}></Navbar>
+      <Navbar
+      //  cartitem={cartitem} wishlist={wishlist} searchItem={searchItem}    
+      //  toggle={toggle}
+      //  setToggle={setToggle}
+       ></Navbar>
       <Herosection></Herosection>
-      <ProductSec addToCart={addToCart} addWishList={addWishList} colorSorege={colorSorege} colors= {colors}  ></ProductSec>
+      <ProductSec 
+      // addToCart={addToCart} addWishList={addWishList} colorSorege={colorSorege} colors= {colors}
+        ></ProductSec>
       <FooterSection></FooterSection>
       {/* <Subfoot></Subfoot> */}
     </div>

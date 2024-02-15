@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import "../App.css";
 import star1 from "./images/Star 1.png";
@@ -15,6 +15,7 @@ import { toggleTheme } from "../Features/themeSlice";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import "./Navbar.css";
+import { Context } from "../Context/Context";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -64,13 +65,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const url = "https://fakestoreapi.com/products/categories";
-export const Navbar = ({ cartitem, wishlist, toggle, setToggle }) => {
+export const Navbar = () => {
   const dispatch = useDispatch();
-
+  const CartItems = useContext(Context);
+  const {cart,wishlist,toggle,setToggle} = CartItems;
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  console.log(document.body.clientWidth);
+  
   function handletoggelStatus() {
     if (document.body.clientWidth >= 1000) {
       setToggle(false);
@@ -134,8 +136,8 @@ export const Navbar = ({ cartitem, wishlist, toggle, setToggle }) => {
           </Link>
           <Link to="/cart">
             <div className={"bag" + (lightTheme ? "" : " wishlist2")}>
-              {cartitem?.length > 0 ? (
-                <p className="cartnum">{cartitem.length}</p>
+              {cart?.length > 0 ? (
+                <p className="cartnum">{cart.length}</p>
               ) : (
                 ""
               )}
@@ -174,7 +176,7 @@ export const Navbar = ({ cartitem, wishlist, toggle, setToggle }) => {
               >
                 {item.name}
                 <ul className="category">
-                  {item.child?.map((i) => {
+                  {item.child?.map((i) => { 
                     return (
                       <> 
                         <li>{i.name}</li>
