@@ -66,6 +66,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const url = "https://fakestoreapi.com/products/categories";
 export const Navbar = () => {
+  const [width,setWidth] = useState(window.innerWidth);
   const dispatch = useDispatch();
   const CartItems = useContext(Context);
   const {cart,wishlist,toggle,setToggle} = CartItems;
@@ -73,11 +74,11 @@ export const Navbar = () => {
     setToggle(!toggle);
   };
   
-  function handletoggelStatus() {
-    if (document.body.clientWidth >= 1000) {
-      setToggle(false);
-    }
-  }
+  // function handletoggelStatus() {
+  //   if (document.body.clientWidth >= 1000) {
+  //     setToggle(false);
+  //   }
+  // }
 
   const Navbariteam = [
     { name: "Home", id: "home" },
@@ -106,9 +107,7 @@ export const Navbar = () => {
     feachdata();
   }, [document.body.clientWidth]);
 
-  useEffect(() => {
-    handletoggelStatus();
-  }, []);
+  
 
   const lightTheme = useSelector((state) => state.themeKey);
 

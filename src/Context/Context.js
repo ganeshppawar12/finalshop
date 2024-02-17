@@ -16,6 +16,7 @@ export const ContextProvider = ({children})=>{
     const [toggle, setToggle] = useState(false); 
 
 
+
     function addToCart(item, e) {
       setloaded(true);
       if (cart && cart.indexOf(item) !== -1) return;
@@ -124,6 +125,20 @@ export const ContextProvider = ({children})=>{
         setOpen(!open)
         
       }
+      useEffect(() => {
+       
+        window.addEventListener("resize",()=>{
+          if( window.innerWidth >= 1000){
+            setToggle(false);
+      
+    
+           }
+        })
+       
+ 
+
+      });
+  
       useEffect(() => {
         localStorage.setItem("item", JSON.stringify(cart));
         localStorage.setItem("whishlist", JSON.stringify(wishlist));
