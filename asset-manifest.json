@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/finalshop/static/css/main.b5e02c8f.css",
+    "main.css": "/finalshop/static/css/main.49213c2c.css",
     "main.js": "/finalshop/static/js/main.694de72d.js",
     "static/css/537.83cf17aa.chunk.css": "/finalshop/static/css/537.83cf17aa.chunk.css",
     "static/js/537.3f43b880.chunk.js": "/finalshop/static/js/537.3f43b880.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/backgroundimg.png": "/finalshop/static/media/backgroundimg.23c95303694a3adba91a.png",
     "static/media/Star 3.png": "/finalshop/static/media/Star 3.b13e19c955a8eb5fcd61.png",
     "index.html": "/finalshop/index.html",
-    "main.b5e02c8f.css.map": "/finalshop/static/css/main.b5e02c8f.css.map",
+    "main.49213c2c.css.map": "/finalshop/static/css/main.49213c2c.css.map",
     "main.694de72d.js.map": "/finalshop/static/js/main.694de72d.js.map",
     "537.83cf17aa.chunk.css.map": "/finalshop/static/css/537.83cf17aa.chunk.css.map",
     "537.3f43b880.chunk.js.map": "/finalshop/static/js/537.3f43b880.chunk.js.map",
@@ -20,7 +20,7 @@
     "787.ee7f086c.chunk.js.map": "/finalshop/static/js/787.ee7f086c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5e02c8f.css",
+    "static/css/main.49213c2c.css",
     "static/js/main.694de72d.js"
   ]
 }
