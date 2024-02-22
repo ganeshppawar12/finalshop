@@ -183,7 +183,7 @@
     text-transform: uppercase;
     transition:all 0.8s ease;
     cursor: pointer;
-    padding: 5px 0;
+    padding: 10px 0;
 
   
   }
@@ -197,7 +197,7 @@
   
 
   .category{
-    margin-top: 5px;
+    /* margin-top: 5px; */
     list-style: none;
   
 
@@ -205,7 +205,7 @@
   }
 
 .category{
-    position: fixed; 
+    position: absolute; 
 
   }
   .category{
