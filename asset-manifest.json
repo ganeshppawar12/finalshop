@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/finalshop/static/css/main.49213c2c.css",
-    "main.js": "/finalshop/static/js/main.694de72d.js",
+    "main.css": "/finalshop/static/css/main.b2ca066f.css",
+    "main.js": "/finalshop/static/js/main.57cdee94.js",
     "static/css/537.83cf17aa.chunk.css": "/finalshop/static/css/537.83cf17aa.chunk.css",
-    "static/js/537.3f43b880.chunk.js": "/finalshop/static/js/537.3f43b880.chunk.js",
+    "static/js/537.0f698cc0.chunk.js": "/finalshop/static/js/537.0f698cc0.chunk.js",
     "static/css/161.ad36dd8a.chunk.css": "/finalshop/static/css/161.ad36dd8a.chunk.css",
-    "static/js/161.e8f90700.chunk.js": "/finalshop/static/js/161.e8f90700.chunk.js",
+    "static/js/161.7f8c200d.chunk.js": "/finalshop/static/js/161.7f8c200d.chunk.js",
+    "static/css/941.696ecba3.chunk.css": "/finalshop/static/css/941.696ecba3.chunk.css",
+    "static/js/941.884a44e5.chunk.js": "/finalshop/static/js/941.884a44e5.chunk.js",
     "static/js/787.ee7f086c.chunk.js": "/finalshop/static/js/787.ee7f086c.chunk.js",
     "static/media/modelimg.png": "/finalshop/static/media/modelimg.b1b1412379253535d094.png",
     "static/media/backgroundimg.png": "/finalshop/static/media/backgroundimg.23c95303694a3adba91a.png",
     "static/media/Star 3.png": "/finalshop/static/media/Star 3.b13e19c955a8eb5fcd61.png",
     "index.html": "/finalshop/index.html",
-    "main.49213c2c.css.map": "/finalshop/static/css/main.49213c2c.css.map",
-    "main.694de72d.js.map": "/finalshop/static/js/main.694de72d.js.map",
+    "main.b2ca066f.css.map": "/finalshop/static/css/main.b2ca066f.css.map",
+    "main.57cdee94.js.map": "/finalshop/static/js/main.57cdee94.js.map",
     "537.83cf17aa.chunk.css.map": "/finalshop/static/css/537.83cf17aa.chunk.css.map",
-    "537.3f43b880.chunk.js.map": "/finalshop/static/js/537.3f43b880.chunk.js.map",
+    "537.0f698cc0.chunk.js.map": "/finalshop/static/js/537.0f698cc0.chunk.js.map",
     "161.ad36dd8a.chunk.css.map": "/finalshop/static/css/161.ad36dd8a.chunk.css.map",
-    "161.e8f90700.chunk.js.map": "/finalshop/static/js/161.e8f90700.chunk.js.map",
+    "161.7f8c200d.chunk.js.map": "/finalshop/static/js/161.7f8c200d.chunk.js.map",
+    "941.696ecba3.chunk.css.map": "/finalshop/static/css/941.696ecba3.chunk.css.map",
+    "941.884a44e5.chunk.js.map": "/finalshop/static/js/941.884a44e5.chunk.js.map",
     "787.ee7f086c.chunk.js.map": "/finalshop/static/js/787.ee7f086c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49213c2c.css",
-    "static/js/main.694de72d.js"
+    "static/css/main.b2ca066f.css",
+    "static/js/main.57cdee94.js"
   ]
 }
