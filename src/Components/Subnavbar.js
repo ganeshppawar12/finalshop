@@ -13,10 +13,10 @@ export const Subnavbar = () => {
     <div className='subnav'>
     <div className='leftsubnav'>
    
-    <img src={im} alt='truck'></img>
+    <img src={im} alt='Delivery'></img>
     <p>Free Delivery</p>
   
-     <img src={line} alt=''></img>
+     <img src={line} alt='Return Policy'></img>
         <p>Return Policy</p>
       
     </div>

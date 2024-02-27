@@ -17,7 +17,7 @@ export const Herosection = () => {
             <h1 className={'fresh' +(lightTheme ?"" : " dark")}>Fresh</h1>
             <h1 className={'year'+(lightTheme ?"" : " year1")}>2022</h1>
             <h1 className={'look' +(lightTheme ?"" : " dark")}>Look</h1>
-            <img src={star4}></img>
+            <img src={star4} alt='start4'></img>
         </div>
        
 
@@ -32,20 +32,18 @@ export const Herosection = () => {
            
             </div>
             <div className='modelimg'>
-                <img src={model}></img>
+                <img src={model} alt='model'></img>
                
             </div>
             <div className='star'>
-                <img src={star}></img>
+                <img src={star} alt='star'></img>
 
             </div>
         </div>
         
     </div>
      <div className='seemore'>
-     {/* <p>See More</p> */}
-     <img className={'see' +(lightTheme ?"" : " see2")} src={seemore}></img>
-     {/* <img src={vectorimg}></img> */}
+     <img className={'see' +(lightTheme ?"" : " see2")} src={seemore} alt='see more'></img>
  </div>
  </>
   )

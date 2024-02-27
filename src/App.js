@@ -2,21 +2,19 @@ import "./App.css";
 import { Subfoot } from "./Components/Subfoot";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import AllMainPage from "./Components/AllMainPage";
-import React, { useContext, useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import React, { useContext } from "react";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 import Product from "./Components/Product";
 import CircularIndeterminate from "./Components/progresser";
 import AllmainFrom from "./Components/AllmainFrom";
 import { Context } from "./Context/Context";
-
 const Carts = React.lazy(() => import("./Components/Cart"));
 const Whislists = React.lazy(() => import("./Components/WishList"));
 
 function App() {
   const lightTheme = useSelector((state) => state.themeKey);
-
   const CartItems = useContext(Context);
   const { toggle } = CartItems;
 

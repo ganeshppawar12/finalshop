@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from "react";
-import { useState } from "react";
+import React, { useContext} from "react";
 import "../App.css";
-import star1 from "./images/Star 1.png";
 import hambburger1 from "./images/hamburger menu.png";
 import cross from "./images/cross.png";
 import { Link } from "react-router-dom";
-import { IconButton, colors } from "@mui/material";
+import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
@@ -64,21 +62,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const url = "https://fakestoreapi.com/products/categories";
+// const url = "https://fakestoreapi.com/products/categories";
 export const Navbar = () => {
-  const [width,setWidth] = useState(window.innerWidth);
   const dispatch = useDispatch();
   const CartItems = useContext(Context);
   const {cart,wishlist,toggle,setToggle} = CartItems;
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  
-  // function handletoggelStatus() {
-  //   if (document.body.clientWidth >= 1000) {
-  //     setToggle(false);
-  //   }
-  // }
 
   const Navbariteam = [
     { name: "Home", id: "home" },
@@ -95,20 +86,7 @@ export const Navbar = () => {
     },
     { name: "Contact Us", id: "contact" },
   ];
-  const [subcat, setsubcat] = useState([]);
-
-  useEffect(() => {
-    const feachdata = async () => {
-      const res = await fetch(url);
-      res.json().then((json) => {
-        setsubcat(json);
-      });
-    };
-    feachdata();
-  }, [document.body.clientWidth]);
-
-  
-
+ 
   const lightTheme = useSelector((state) => state.themeKey);
 
   return (
@@ -120,7 +98,6 @@ export const Navbar = () => {
           <Link to="/whishlist">
             {" "}
             <div className={"whislist" + (lightTheme ? "" : " wishlist2")}>
-              {/* Wishlist ({wishlist.length}) */}
               {wishlist?.length > 0 ? (
                 <p className="wishpro">{wishlist.length}</p>
               ) : (
@@ -141,7 +118,6 @@ export const Navbar = () => {
                 ""
               )}
 
-              {/* <p>Bag({cartitem.length})</p>  */}
               <IconButton>
                 <AddShoppingCartIcon style={{ color: "#ec729c" }} />
               </IconButton>
@@ -155,7 +131,6 @@ export const Navbar = () => {
             control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
           />
         </div>
-        {/* <img className="star1" src={star1}></img> */}
         <StarIcon className={"star1" + (lightTheme ? "" : " dark")}></StarIcon>
       </div>
 
@@ -192,7 +167,7 @@ export const Navbar = () => {
         className={"hamburger" + (lightTheme ? "" : " ham1")}
         onClick={handleToggle}
       >
-        {toggle ? <img src={cross}></img> : <img src={hambburger1}></img>}
+        {toggle ? <img src={cross} alt="cross"></img> : <img src={hambburger1} alt="="></img>}
       </div>
     </>
   );

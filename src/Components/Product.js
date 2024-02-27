@@ -35,7 +35,7 @@ const Product = () => {
         {
           <div className="productItem">
             <div className="productitemImg">
-              <img src={productitem.image}></img>
+              <img src={productitem.image} alt={productitem.title}></img>
               <div className="productsbtn">
                 <button onClick={() => addToCart(productitem)} className="productcart"><AddShoppingCartIcon ></AddShoppingCartIcon>Add To Cart</button>
                 <button className="productBuy"><SouthIcon ></SouthIcon> Buy Now</button>

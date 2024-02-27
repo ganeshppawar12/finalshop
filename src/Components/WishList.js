@@ -31,7 +31,7 @@ const WishList = () => {
                 wishlist.map((item,index) => (
                   <>
                     <div key={index} className={"wishitemCard" +(lightTheme ?"" : " wishitemCarddark")}>
-                    <Link to={`/${item.id}`}>    <img src={item.image}></img></Link> 
+                    <Link to={`/${item.id}`}>    <img src={item.image} alt={item.title}></img></Link> 
                       <div className="itemInfor">
                       <Link to={`/${item.id}`}>      <h4>{item.title}</h4></Link> 
                         <p>{item.category}</p>
@@ -59,7 +59,6 @@ const WishList = () => {
             </div>
            
           </div>
-          {/* </div> */}
         </div>
   )
 }

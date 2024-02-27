@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useDispatch, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import {Context} from '../Context/Context'
 
 import './cart.css'
@@ -15,15 +15,6 @@ const Cart = () => {
   const {cart,setCart,counterss,deccounters,colors,openfrom,addWishList} = CartItems;
   const [subtotal, setSubtotal] = useState();
   const [Shipping, setShipping] = useState(5 * cart.length);
-
-
-
-
-  const [loaded, setloaded] = useState(false);
-
- 
-
-  let quantity = document.querySelectorAll(".quantity");
   const lightTheme = useSelector((state) => state.themeKey);
 
   function handleDelete(item, index) {
@@ -68,7 +59,6 @@ const Cart = () => {
     
 
     <div style={{ height:"100vh" }}>
-      {/* <div> */}
       <Link to="/">
         {" "}
         <h3 className={"cartheading" +(lightTheme ?"" : " dark3")}>
@@ -81,9 +71,9 @@ const Cart = () => {
           {cart.length > 0 ? (
             cart.map((item, index) => (
               <>
-                <div key={index} className="itemCard">
+                <div key={item.id} className="itemCard">
                   <Link to={`/${item.id}`}>
-                  <img src={item.image}></img></Link>
+                  <img src={item.image} alt={item.title}></img></Link>
                   <div className="itemInfor">
                   <Link to={`/${item.id}`}><h4>{item.title}</h4></Link>  
                     <p>{item.category}</p>
@@ -106,10 +96,9 @@ const Cart = () => {
                   </div>
                   <div className="incredecri">
                     <button onClick={(e) => counterss(item)}>+</button>
-                    {/* <button onClick={(e) => dispatch("increment")}>+</button> */}
                     <p className="quantity">{item.qun}</p>
                     <button onClick={(e) => deccounters(item)}>-</button>
-                    {/* <button onClick={(e) => dispatch("decriment")}>-</button> */}
+                    
                   </div>
                   <div className="totalamt">
                     <p>Total:</p>
@@ -151,7 +140,6 @@ const Cart = () => {
     
       </div>
 
-      {/* </div> */}
           
     </div>
           

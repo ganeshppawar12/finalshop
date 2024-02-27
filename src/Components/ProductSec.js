@@ -2,20 +2,18 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import Arrow1 from "./images/Arrow 1.png";
 import Arrow2 from "./images/Arrow 2.png";
-import star2 from "./images/Star 2.png";
 import group1 from "./images/Group 19.png";
 import "../App.css";
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import './Product.css'
-import { Skeleton } from "@mui/material";
 import CircularIndeterminate from "./progresser";
 import { Link } from "react-router-dom";
 import {Context} from '../Context/Context'
 
 const url = "https://fakestoreapi.com/products";
 
-export const ProductSec = () => {
+ const ProductSec = () => {
   const [productiteam, setproductiteam] = useState([]);
   const [bestSeller, setBestSeller] = useState([]);
   const [getproductiteam, setgetproductiteam] = useState([]);
@@ -25,7 +23,7 @@ export const ProductSec = () => {
   const [loaded, setloaded] = useState(false);
   
   const CartItems = useContext(Context);
-  const {cart,addToCart,colors = 'black',addWishList} = CartItems;
+  const {addToCart,colors = 'black',addWishList} = CartItems;
 
 
 
@@ -101,11 +99,9 @@ export const ProductSec = () => {
     setproductiteam(() => all);
   }
 
-  const heart = document.querySelectorAll('.heartIcon')
 
 
-
-   {
+   
   return (
     <div className="productZone">
 {loaded ? <CircularIndeterminate></CircularIndeterminate>:
@@ -114,12 +110,11 @@ export const ProductSec = () => {
         <div className="namebar">
           <h2 onClick={()=>allitem()}>New products</h2>
           <div >
-            {/* <img src={star2}></img> */}
             <StarIcon className="star2"></StarIcon>
           </div>
           <div className="productnavigation">
-            <img onClick={forworde} src={Arrow2}></img>
-            <img onClick={backword} src={Arrow1}></img>
+            <img onClick={forworde} src={Arrow2}   alt="<"></img>
+            <img onClick={backword} src={Arrow1}   alt=">"></img>
           </div>
         </div>
 
@@ -146,9 +141,9 @@ export const ProductSec = () => {
               <Link to={`${iteam.id}`}>
 
                   <div className="prodcardimg">
-                    <img className="iteamimg" src={iteam.image}></img>
+                    <img className="iteamimg" src={iteam.image} alt={iteam.title}></img>
                     <div className="linkimg">
-                      <img src={group1}></img>
+                      <img style={{color:'violet'}} src={group1} alt="productLink"></img>
                     </div>
                    
                   </div>
@@ -157,7 +152,6 @@ export const ProductSec = () => {
              
                   <h1 className="prohead">{iteam.title}</h1>
                 </div>
-                {/* <p className="description">{iteam.description}</p> */}
                 <p className="price">${iteam.price}</p>
                 <div className="shopbtnk">
                       <button onClick={() => addToCart(iteam)}>
@@ -169,13 +163,14 @@ export const ProductSec = () => {
           </div>
 
           <div className="navigation">
-            <img className="arrow2" onClick={forworde} src={Arrow2}></img>
-            <img className="arrow1" onClick={backword} src={Arrow1}></img>
+            <img className="arrow2" src={Arrow2} alt="<" onClick={forworde} ></img>
+            <img className="arrow1" onClick={backword} src={Arrow1} alt=">"></img>
           </div>
         </div>
       </div>
       }
     </div>
   );
-            }
+            
 };
+export default ProductSec;
